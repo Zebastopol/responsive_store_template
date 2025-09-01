@@ -42,7 +42,7 @@ img{ max-width:100%; display:block; }
     "main"
     "footer";
   gap: 16px;
-  /*width:min( 1200px, 100%);*/
+  width:min( 1200px, 100%);
   min-width: 100%;
   /*margin-inline: auto;*/
   padding:12px;
@@ -197,7 +197,7 @@ img{ max-width:100%; display:block; }
       "filters main"
       "footer footer";
     gap: 18px;
-    /*padding:16px;*/
+    padding:16px;
   }
   .nav{
     margin: 0;
