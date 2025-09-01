@@ -6,6 +6,6 @@
 <h3>@media (min-width: 992px)</h3>
 ![imagen_referencial2](assets/img/rdm2.jpg)
 <h3>@media (min-width: 576px)</h3>
-![imagen_referencial2](assets/img/rdm3.jpg)
+![imagen_referencial3](assets/img/rdm3.jpg)
 
-![imagen_referencial2](assets/img/rdm4.jpg)
+![imagen_referencial4](assets/img/rdm4.jpg)
