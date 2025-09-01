@@ -4,22 +4,21 @@
 :root{
   --bg: #0b1020;
   --surface: #141a33;
-  --surface-2:#0f1530;
+  --surface-2:#270f30fc;
   --text: #e9ecf8;
   --muted:#a5afd1;
   --primary:#6ee7ff;
   --accent:#8cff46;
-  --chip:#1d2447;
   --border: #273057;
 }
 
 *{ box-sizing: border-box; }
-html,body{ height:100%; }
+html,body{ height:100%; min-width: 100%;}
 body{
   margin:0;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 10% -10%, #1a2142, transparent 50%),
-              radial-gradient(1200px 800px at 110% 10%, #14204a, transparent 45%),
+  background: radial-gradient(1200px 600px at 10% -10%, #421a1aed, transparent 50%),
+              radial-gradient(1200px 800px at 110% 10%, #4a142e, transparent 45%),
               var(--bg);
   color:var(--text);
   line-height:1.5;
@@ -27,11 +26,7 @@ body{
 
 img{ max-width:100%; display:block; }
 
-/* Visually hidden for headings */
-.sr-only{
-  position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0;
-  clip: rect(0 0 0 0); overflow:hidden; white-space:nowrap;
-}
+
 
 /* ===============
    Layout (CSS Grid + grid-template-areas)
@@ -47,8 +42,9 @@ img{ max-width:100%; display:block; }
     "main"
     "footer";
   gap: 16px;
-  width:min(1200px, 100%);
-  margin-inline:auto;
+  /*width:min( 1200px, 100%);*/
+  min-width: 100%;
+  /*margin-inline: auto;*/
   padding:12px;
 }
 
@@ -59,12 +55,14 @@ img{ max-width:100%; display:block; }
   grid-area: nav;
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:10px 12px;
+  min-width: 100%;
+  margin: 0;
   border:1px solid var(--border);
-  border-radius:16px;
+  /*border-radius:16px;*/
   background:linear-gradient(180deg, var(--surface), var(--surface-2));
-  position:relative;
+  position: sticky; top:0; bottom: 0; z-index:100;
+  padding: 0%;
+  margin-inline: 0 0;
 }
 .brand{
   display:flex; align-items:center; gap:10px;
@@ -72,7 +70,8 @@ img{ max-width:100%; display:block; }
   letter-spacing:.2px;
 }
 .brand__logo{ font-size:20px; filter: drop-shadow(0 0 6px rgba(110,231,255,.4)); }
-.nav__center, .nav__right{ display:none; } /* oculto en mobile */
+.brand__slogan{ font-size:.85rem; font-weight:400; color:var(--muted); font-style: italic; display: block; line-height: 1; }
+.nav__center, .nav__right{ display:none; text-align: center;} /* oculto en mobile */
 .nav__link{ color:var(--muted); text-decoration:none; padding:.5rem .75rem; border-radius:10px; }
 .nav__link:hover{ background:rgba(255,255,255,.06); color:var(--text); }
 
@@ -121,17 +120,7 @@ img{ max-width:100%; display:block; }
 }
 .filters__form{ display:flex; flex-direction:column; gap:12px; }
 .filters__row{ display:flex; flex-wrap:wrap; gap:8px; }
-.chip{
-  display:flex; align-items:center; gap:8px;
-  background:var(--chip);
-  border:1px solid var(--border);
-  padding:.4rem .7rem;
-  border-radius:999px;
-  color:var(--text);
-  cursor:pointer;
-  user-select:none;
-}
-.chip input{ accent-color: var(--accent); }
+
 .select{
   display:flex; flex-direction:column; gap:6px;
   min-width: 160px;
@@ -162,7 +151,7 @@ img{ max-width:100%; display:block; }
   min-width:260px;
   border:1px solid var(--border);
   border-radius:16px;
-  background:linear-gradient(180deg, #0f1735, #0e1330);
+  background:linear-gradient(180deg, #210f35, #0e1330);
   overflow:hidden;
   display:flex; flex-direction:column;
 }
@@ -184,8 +173,10 @@ img{ max-width:100%; display:block; }
   display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
   gap:12px;
   border:1px solid var(--border);
-  border-radius:16px;
+  /*border-radius:16px;*/
   padding:14px;
+  margin: 0%;
+  min-width: 100%;
   background:linear-gradient(180deg, var(--surface), var(--surface-2));
 }
 .footer__links{ display:flex; gap:14px; }
@@ -206,10 +197,13 @@ img{ max-width:100%; display:block; }
       "filters main"
       "footer footer";
     gap: 18px;
-    padding:16px;
+    /*padding:16px;*/
   }
   .nav{
+    margin: 0;
     padding:12px 16px;
+    min-width: 100%;
+
   }
   .nav__center, .nav__right{ display:flex; }
   .nav__center{ gap:6px; margin-left: 12px; }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Autos Eléctricos</title>
+  <title>Tienda de Juegos y Accesorios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -14,17 +14,17 @@
     <!-- Navegación -->
     <header class="nav" role="banner">
       <div class="nav__left">
-        <a class="brand" href="#"><span class="brand__logo" aria-hidden="true">⚡</span><span class="brand__text">EV Store</span></a>
+        <a class="brand" href="#"><span class="brand__logo" aria-hidden="true">💥</span><span class="brand__text">KHAOS STORE <span class="brand__slogan">  Tu rincón de culto</span></span></a>
       </div>
       <div class="nav__center" aria-label="Navegación principal">
-        <a href="#" class="nav__link">Modelos</a>
+        <a href="#" class="nav__link">Categorías</a>
         <a href="#" class="nav__link">Ofertas</a>
         <a href="#" class="nav__link">Blog</a>
         <a href="#" class="nav__link">Contacto</a>
       </div>
       <div class="nav__right">
         <form class="search" role="search" aria-label="Buscar">
-          <input type="search" placeholder="Buscar modelos..." aria-label="Buscar" />
+          <input type="search" placeholder="Buscar productos..." aria-label="Buscar" />
         </form>
         <button class="btn ghost">Ingresar</button>
         <button class="icon-btn" aria-label="Carro">
@@ -46,46 +46,28 @@
 
     <!-- Filtros -->
     <aside class="filters" aria-labelledby="filtros-titulo">
-      <h2 class="sr-only" id="filtros-titulo">Filtros de búsqueda</h2>
-      <form class="filters__form" action="#" method="get">
-        <div class="filters__row">
-          <label class="chip">
-            <input type="checkbox" name="segmento" value="compacto" />
-            <span>Compacto</span>
-          </label>
-          <label class="chip">
-            <input type="checkbox" name="segmento" value="sedan" />
-            <span>Sedán</span>
-          </label>
-          <label class="chip">
-            <input type="checkbox" name="segmento" value="suv" />
-            <span>SUV</span>
-          </label>
-          <label class="chip">
-            <input type="checkbox" name="segmento" value="pickup" />
-            <span>Pickup</span>
-          </label>
-        </div>
-
+      
         <div class="filters__row">
           <label class="select">
-            <span class="select__label">Marca</span>
+            <span class="select__label">Categorías</span>
             <select name="marca">
               <option value="">Todas</option>
-              <option>Tesla</option>
-              <option>Nissan</option>
-              <option>Kia</option>
-              <option>BYD</option>
+              <option>Pack de Cartas</option>
+              <option>Videojuegos</option>
+              <option>Figuras Coleccionables</option>
+              <option>Puzzles</option>
             </select>
           </label>
 
           <label class="select">
-            <span class="select__label">Autonomía</span>
+            <span class="select__label"></span>
             <select name="autonomia">
-              <option value="">Cualquiera</option>
-              <option>200+ km</option>
-              <option>350+ km</option>
-              <option>500+ km</option>
+              <option value="">Marcas</option>
+              <option>Luminasta</option>
+              <option>Banpresto</option>
+              <option>Cutebee</option>
+              <option>Otras</option>
+
             </select>
           </label>
 
@@ -93,9 +75,9 @@
             <span class="select__label">Precio máx.</span>
             <select name="precio">
               <option value="">Sin tope</option>
-              <option>US$ 25.000</option>
-              <option>US$ 35.000</option>
-              <option>US$ 50.000</option>
+              <option>$ 25.000</option>
+              <option>$ 35.000</option>
+              <option>$ 50.000</option>
             </select>
           </label>
         </div>
@@ -105,78 +87,90 @@
     <!-- Principal -->
     <main class="main" id="contenido">
       <header class="main__header">
-        <h1>Explora autos eléctricos</h1>
-        <p class="muted">Imágenes y textos de referencia. Reemplaza con tu contenido final.</p>
+        <h1>Explora nuestras Categorías y Productos</h1>
+        <p class="muted">Somos una tienda de productos especializados, donde encontrarás todo lo que andas buscando.</p>
       </header>
 
       <ul class="card-list">
         <li class="card">
-          <img src="assets/img/ev_01.png" alt="Auto eléctrico compacto azul" class="card__img"/>
+          <img src="assets/img/card6_puzzle3d.jpg" alt="Puzzle Sagrada Familia" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">Volt Mini</h3>
-            <p class="card__meta">Autonomía: 320 km • Carga rápida</p>
+            <h3 class="card__title">Puzzle 3D Sagrada Familia</h3>
+            <p class="card__meta">Rompecabezas 3D</p>
             <div class="price-actions">
-              <span class="price">US$ 24.990</span>
+              <span class="price">$ 24.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
         </li>
 
         <li class="card">
-          <img src="assets/img/ev_02.png" alt="Auto eléctrico sedán plateado" class="card__img"/>
+          <img src="assets/img/card2_yugi.jpg" alt="Juego de cartas Yu-Gi-Oh!" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">E-Sedan Pro</h3>
-            <p class="card__meta">Autonomía: 480 km • Piloto asistido</p>
+            <h3 class="card__title">Juego de cartas Yu-Gi-Oh!</h3>
+            <p class="card__meta">Pack de cartas</p>
             <div class="price-actions">
-              <span class="price">US$ 39.990</span>
+              <span class="price">$ 39.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
         </li>
 
         <li class="card">
-          <img src="assets/img/ev_03.png" alt="SUV eléctrico rojo" class="card__img"/>
+          <img src="assets/img/card3_yoruichi.jpg" alt="Escultura 3d" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">Terra SUV</h3>
-            <p class="card__meta">Autonomía: 520 km • 4x4</p>
+            <h3 class="card__title">Figura 3D Yoruichi </h3>
+            <p class="card__meta">Figuras de colección</p>
             <div class="price-actions">
-              <span class="price">US$ 49.990</span>
+              <span class="price">$ 49.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
         </li>
 
         <li class="card">
-          <img src="assets/img/ev_04.png" alt="Pickup eléctrica blanca" class="card__img"/>
+          <img src="assets/img/card4_chez.jpg" alt="Juego de Ajedrez" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">Power Pickup</h3>
-            <p class="card__meta">Autonomía: 450 km • 1.5t carga</p>
+            <h3 class="card__title">Juego de Ajedrez Griego</h3>
+            <p class="card__meta">Juegos de Salón</p>
             <div class="price-actions">
-              <span class="price">US$ 54.990</span>
+              <span class="price">$ 54.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
         </li>
 
         <li class="card">
-          <img src="assets/img/ev_05.png" alt="Coupé eléctrico negro" class="card__img"/>
+          <img src="assets/img/card3_yor3d.jpg" alt="Figura Armable" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">Neo Coupé</h3>
-            <p class="card__meta">Autonomía: 410 km • Tracción trasera</p>
+            <h3 class="card__title">Figura 3D YorForgen</h3>
+            <p class="card__meta">Figuras de colección</p>
             <div class="price-actions">
-              <span class="price">US$ 44.990</span>
+              <span class="price">$ 44.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
         </li>
 
         <li class="card">
-          <img src="assets/img/ev_06.png" alt="Hatchback eléctrico verde" class="card__img"/>
+          <img src="assets/img/card1_poke.jpg" alt="Juego de cartas pokemon" class="card__img"/>
           <div class="card__body">
-            <h3 class="card__title">Eco Hatch</h3>
-            <p class="card__meta">Autonomía: 360 km • Ciudad</p>
+            <h3 class="card__title">Juego de cartas pokemon</h3>
+            <p class="card__meta">Pack de cartas</p>
             <div class="price-actions">
-              <span class="price">US$ 22.990</span>
+              <span class="price">$ 22.990</span>
+              <button class="btn">Ver detalles</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="card">
+          <img src="assets/img/card3_mika3d.jpg" alt="Figura 3D Mikasa" class="card__img"/>
+          <div class="card__body">
+            <h3 class="card__title">Figura 3D Mikasa</h3>
+            <p class="card__meta">Figuras de colección</p>
+            <div class="price-actions">
+              <span class="price">$ 22.990</span>
               <button class="btn">Ver detalles</button>
             </div>
           </div>
@@ -186,7 +180,9 @@
 
     <!-- Pie de página -->
     <footer class="footer">
-      <p>© 2025 EV Store — Proyecto educativo responsive</p>
+      <p>© 2025 KHAOSSTORE — Proyecto educativo y responsive</p>
+      <p>Made with ❤️ by Zebastopol</p>
+
       <nav class="footer__links" aria-label="Enlaces del pie">
         <a href="#">Privacidad</a>
         <a href="#">Términos</a>
